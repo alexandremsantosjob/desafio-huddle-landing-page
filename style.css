@@ -1,0 +1,169 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+
+html{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1440px;
+    height: 100%;
+    margin: 0 auto;
+
+}
+body{
+    background: url(images/bg-desktop.svg) center center no-repeat;
+    background-size: cover;
+    background-color: hsl(257, 40%, 49%); 
+    font-family: 'Open-sans', sans-serif;
+    
+}
+.container{
+    display: grid;
+    justify-content: center;
+    align-self: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 100px 700px ;
+    grid-template-areas: 'logo logo logo '
+                            'desktop desktop info'
+                            'desktop desktop info'
+                            'media-links media-links media-links';                            ;
+    gap: 30px;
+}
+.logo{
+    grid-area: logo;
+    justify-content: flex-start;
+    justify-content: center;
+    align-self: center;
+    
+}
+
+.logo img{
+    width: 20%;
+}
+
+.hub-desktop{
+    grid-area: desktop;
+    justify-content: center;
+    align-self: center;
+}
+
+.info{
+    grid-area: info;
+    color: #fff;
+    justify-self: center;
+    margin-top: 80px;
+
+}
+
+.info h1{
+    font-size: 2.3rem;
+    font-weight: 600;
+    line-height: 60px;
+
+}
+
+.info p{
+    margin-top: 20px;
+    font-family: 'Poppins',sans-serif;
+    opacity: 2;
+    line-height: 30px;
+
+}
+button{
+    width: 200px;
+    height: 50px;
+    border-radius: 80px;
+    font-size: 18px;
+    color: hsl(257, 40%, 49%);
+}
+
+button:hover{
+    color: hsl(300, 69%, 71%);
+}
+
+.btn{
+    margin-top: 20px;
+    
+}
+
+.media-links{
+    grid-area: media-links;
+    
+}
+
+
+
+.media-links ul{
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.media-links li{
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    margin-left: 20px;
+
+    border: #fff solid 1px;
+    border-radius: 50px;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+}
+
+.media-links i{
+    color: #fff;
+}
+
+.media-links i:hover{
+    color: hsl(300, 69%, 71%);
+}
+
+@media(max-width: 425px){
+        
+    body{
+        background-color: none;
+        margin-top: 100px;
+    }
+
+    .logo{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .logo img{
+        width: 150px;
+     
+    }
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            
+        }
+
+        .hub-desktop{
+            width: 100%;
+        }
+        .info{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+  
+        }
+
+        .info h1{
+            font-size: 20px;
+            line-height: 25px;
+        }
+
+        .attribution{
+            margin-top: 20px;
+        }
+}
